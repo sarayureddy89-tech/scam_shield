@@ -120,10 +120,20 @@ def get_history(db: Session = Depends(get_db), user=Depends(get_current_user_opt
         ],
     }
 
-
 @router.get("/{scan_id}", response_model=ScanResult)
-def get_scan(scan_id: str, db: Session = Depends(get_db)):
+def get_scan(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    user=Depends(get_current_user_optional),
+):
     record = db.query(ScanRecord).filter(ScanRecord.id == scan_id).first()
+
     if not record:
         raise HTTPException(status_code=404, detail="Scan not found")
+
+    # User-specific scans can only be accessed by their owner.
+    if record.user_id is not None:
+        if not user or record.user_id != user.id:
+            raise HTTPException(status_code=403, detail="Not authorized to access this scan")
+
     return _record_to_result(record)
