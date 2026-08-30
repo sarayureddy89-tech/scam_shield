@@ -1,6 +1,6 @@
 # 🛡️ ScamShield
 
-> **AI-powered, explainable personal digital-safety and scam-prevention assistant.**
+> **Explainable, rule-based intelligent scam-detection and digital-safety assistant.**
 
 ScamShield is a full-stack web application that helps users identify suspicious **messages, URLs, QR codes, and payment requests**.
 
