@@ -1,0 +1,12 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.34
+pydantic[email]==2.9.2
+PyJWT==2.9.0
+python-multipart==0.0.9
+
+# Optional — enables server-side QR image decoding (requires system zbar lib).
+# The app works fully without these: pass a pre-decoded `payload` string instead
+# (this is what the web app's client-side QR reader + the seed data both do).
+pyzbar==0.1.9
+Pillow==10.4.0
