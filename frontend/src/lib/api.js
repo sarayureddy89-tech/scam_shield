@@ -1,4 +1,5 @@
-const BASE = "/api";
+//const BASE = "/api";
+const BASE = "https://scam-shield-1-wazv.onrender.com/api";
 
 function authHeaders() {
   const token = localStorage.getItem("scamshield_token");
