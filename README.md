@@ -622,10 +622,8 @@ A complete project demonstration video will be added here.
 ### ▶️ Demo Video
 
 ```text
-PASTE GOOGLE DRIVE / YOUTUBE / VIDEO LINK HERE
+https://drive.google.com/file/d/1ZTShjOZiNnAhc5KFUal38ORndyrhqJPQ/view?usp=sharing
 ```
-
-> **Note:** The demo video link will be updated after the final demonstration video is uploaded.
 
 The demo will showcase:
 
