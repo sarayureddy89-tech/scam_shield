@@ -21,7 +21,7 @@ try:
     from pyzbar.pyzbar import decode as _zbar_decode
     from PIL import Image
     _HAS_DECODER = True
-except ImportError:  # pragma: no cover - offline demo environments
+except Exception:  # pragma: no cover - offline demo environments
     _HAS_DECODER = False
 
 
